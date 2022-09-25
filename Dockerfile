@@ -1,14 +1,25 @@
-FROM node:14.15.4-slim
+FROM node:14.17.0-slim
 
 RUN apt update && apt install -y --no-install-recommends \
-  git \
+  nano \
   gpg \
   gnupg \ 
+  # gpgconf \
+  # libassuan0 \
+  # libgpg-error0 \
   gpg-agent \
   openssh-client \
-  socat \
+  socat
+
+RUN mkdir -p /usr/share/man/man1 && \
+  echo 'deb http://ftp.debian.org/debian stretch-backports main' | tee /etc/apt/sources.list.d/stretch-backports.list && \
+  apt update && apt install -y \
+  git \
   ca-certificates \
-  nano
+  openjdk-11-jre
+
+
+ENV JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
 USER node 
 
