@@ -18,9 +18,7 @@
 	"settings": {
 		"terminal.integrated.defaultProfile.linux": "bash"
 	},
-	"extensions": [
-		""
-	]
+	"extensions": []
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Uncomment the next line if you want start specific services in your Docker Compose config.
