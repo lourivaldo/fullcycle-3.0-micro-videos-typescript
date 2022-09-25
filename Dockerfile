@@ -2,8 +2,9 @@ FROM node:14.17.0-slim
 
 RUN apt update && apt install -y --no-install-recommends \
   nano \
+  git \
   gpg \
-  gnupg \ 
+  gnupg \
   # gpgconf \
   # libassuan0 \
   # libgpg-error0 \
@@ -14,7 +15,6 @@ RUN apt update && apt install -y --no-install-recommends \
 RUN mkdir -p /usr/share/man/man1 && \
   echo 'deb http://ftp.debian.org/debian stretch-backports main' | tee /etc/apt/sources.list.d/stretch-backports.list && \
   apt update && apt install -y \
-  git \
   ca-certificates \
   openjdk-11-jre
 
