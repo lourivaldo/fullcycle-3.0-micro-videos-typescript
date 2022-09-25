@@ -21,8 +21,8 @@
     "titleBar.inactiveForeground": "#e7e7e799"
   },
   "conventionalCommits.scopes": [
-      "devcontainer.json",
-      "settings.json"
+    "devcontainer.json",
+    "settings.json"
   ],
   "peacock.color": "#42b883"
 }
