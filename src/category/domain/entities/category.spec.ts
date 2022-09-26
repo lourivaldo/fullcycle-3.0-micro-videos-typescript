@@ -1,7 +1,6 @@
 import { omit } from "lodash"
 import { Category } from "./category"
 import { UniqueEntityId } from "../../../@shared/domain/unique-entity-is.vo";
-import { InvalidUuidError } from '../../../../.history/src/@shared/errors/invalid-uuid.error_20220910205131';
 
 describe('Category Unit Tests', () => {
   test("constructor of category", () => {
@@ -86,7 +85,7 @@ describe('Category Unit Tests', () => {
     }, new UniqueEntityId('44bda9e6-3139-11ed-a261-0242ac120002'))
     expect(category.id).toEqual(new UniqueEntityId('44bda9e6-3139-11ed-a261-0242ac120002'))
 
-   
+
   })
 
   test("getter of name prop", () => {
