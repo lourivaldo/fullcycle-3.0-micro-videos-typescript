@@ -14,11 +14,13 @@ export class Category {
     public readonly props: CategoryProperties,
     id?: UniqueEntityId
   ) {
+    console.log(require("os").userInfo().username);
+    console.log(1 == 1);
     this.id = id || new UniqueEntityId()
     this.description = this.props.description
     this.isActive = this.props.isActive
     this.props.createdAt = this.props.createdAt || new Date()
-   }
+  }
 
   get name() {
     return this.props.name
