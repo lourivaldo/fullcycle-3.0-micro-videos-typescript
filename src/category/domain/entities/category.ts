@@ -1,4 +1,4 @@
-import { UniqueEntityId } from '../../../@shared/domain/unique-entity-is.vo';
+import { UniqueEntityId } from '../../../@seedwork/domain/value-objects/unique-entity-is.vo';
 
 type CategoryProperties = {
   name: string
@@ -14,8 +14,6 @@ export class Category {
     public readonly props: CategoryProperties,
     id?: UniqueEntityId
   ) {
-    console.log(require("os").userInfo().username);
-    console.log(1 == 1);
     this.id = id || new UniqueEntityId()
     this.description = this.props.description
     this.isActive = this.props.isActive
