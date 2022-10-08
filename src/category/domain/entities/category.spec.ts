@@ -83,9 +83,7 @@ describe('Category Unit Tests', () => {
     category = new Category({
       name: 'Movie',
     }, new UniqueEntityId('44bda9e6-3139-11ed-a261-0242ac120002'))
-    expect(category.id).toEqual(new UniqueEntityId('44bda9e6-3139-11ed-a261-0242ac120002'))
-
-
+    expect(category.id.value).toBe(new UniqueEntityId('44bda9e6-3139-11ed-a261-0242ac120002').value)
   })
 
   test("getter of name prop", () => {

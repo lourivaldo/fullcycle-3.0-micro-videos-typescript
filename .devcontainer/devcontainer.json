@@ -20,7 +20,8 @@
 		"terminal.integrated.defaultProfile.linux": "zsh"
 	},
 	"extensions": [
-		"firsttris.vscode-jest-runner"
+		"firsttris.vscode-jest-runner",
+		"andys8.jest-snippets"
 	]
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
