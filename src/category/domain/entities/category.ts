@@ -1,4 +1,4 @@
-import { UniqueEntityId } from '../../../@seedwork/domain/value-objects/unique-entity-is.vo';
+import { UniqueEntityId } from '../../../@seedwork/domain/value-objects/unique-entity-id.vo';
 
 type CategoryProperties = {
   name: string
