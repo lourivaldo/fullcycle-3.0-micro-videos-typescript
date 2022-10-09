@@ -86,11 +86,12 @@ describe('Category Unit Tests', () => {
     expect(category.id).toBe(new UniqueEntityId('44bda9e6-3139-11ed-a261-0242ac120002').value)
   })
 
-  test("getter of name prop", () => {
-    const category = new Category({
-      name: 'Movie'
-    })
+  test("getter and setter of name prop", () => {
+    const category = new Category({ name: 'Movie' })
     expect(category.name).toBe('Movie')
+
+    category['name'] = 'any'
+    expect(category.name).toBe('any')
   })
 
   test("getter and setter of description prop", () => {
@@ -145,5 +146,24 @@ describe('Category Unit Tests', () => {
     })
     expect(category.isActive).toBe(true)
     expect(category.createdAt).toBe(createdAt)
+  })
+
+  test("should update a category", () => {
+    let category = new Category({ name: 'Movie' })
+    category.update('Terror', 'any')
+    expect(category.name).toBe('Terror')
+    expect(category.description).toBe('any')
+  })
+
+  test("should activate a category", () => {
+    let category = new Category({ name: 'Movie' })
+    category.activate()
+    expect(category.isActive).toBe(true)
+  })
+
+  test("should deactivate a category", () => {
+    let category = new Category({ name: 'Movie' })
+    category.deactivate()
+    expect(category.isActive).toBe(false)
   })
 })
