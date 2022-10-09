@@ -23,7 +23,6 @@ describe('UniqueEntityId Unit Tests', () => {
     expect(validateSpy).toHaveBeenCalledTimes(1)
   })
 
-
   it('should accept uuid passed in constructor', () => {
     const vo = new UniqueEntityId()
     expect(validate(vo.value)).toBe(true)

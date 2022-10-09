@@ -66,24 +66,24 @@ describe('Category Unit Tests', () => {
       name: 'Movie',
     })
     expect(category.id).not.toBeNull()
-    expect(category.id).toBeInstanceOf(UniqueEntityId)
+    expect(category.uniqueEntityId).toBeInstanceOf(UniqueEntityId)
 
     category = new Category({
       name: 'Movie',
     }, null)
     expect(category.id).not.toBeNull()
-    expect(category.id).toBeInstanceOf(UniqueEntityId)
+    expect(category.uniqueEntityId).toBeInstanceOf(UniqueEntityId)
 
     category = new Category({
       name: 'Movie',
     }, undefined)
     expect(category.id).not.toBeNull()
-    expect(category.id).toBeInstanceOf(UniqueEntityId)
+    expect(category.uniqueEntityId).toBeInstanceOf(UniqueEntityId)
 
     category = new Category({
       name: 'Movie',
     }, new UniqueEntityId('44bda9e6-3139-11ed-a261-0242ac120002'))
-    expect(category.id.value).toBe(new UniqueEntityId('44bda9e6-3139-11ed-a261-0242ac120002').value)
+    expect(category.id).toBe(new UniqueEntityId('44bda9e6-3139-11ed-a261-0242ac120002').value)
   })
 
   test("getter of name prop", () => {
